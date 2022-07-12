@@ -1,0 +1,17 @@
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+$animationDuration: 1s;
+$animationTimingFunc: ease;
+@mixin fly {
+    transition: transform $animationDuration $animationTimingFunc, opacity $animationDuration $animationTimingFunc;
+   
+}

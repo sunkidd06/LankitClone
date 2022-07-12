@@ -1,0 +1,29 @@
+@import "./content";
+@import "./header";
+@import "./variable.scss";
+@import "./footer";
+@import "breakpoints";
+* {
+    // scroll-behavior: smooth;
+}
+@font-face {
+    src: url("../access/font/HKGroteskPro-Regular.woff2");
+    font-family: myFirstFont;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#ffffff;
+    font-family:myFirstFont;
+}
+html {
+    font-size: 62.5%;
+    font-family:myFirstFont;
+}
+// .app {
+//     // max-width:1021px;
+//     // width: 100%;
+//     // margin: 0 auto;
+// }
+

@@ -1,0 +1,103 @@
+$color-primary : #335eea;
+$color-secondary : #eaeefd;
+$color-white : #fff;
+$color-text-muted: #869ab8;
+$color-green: #42ba96;
+
+@mixin btn__primary($width, $height, $backgroundColor) {
+    background-color: $backgroundColor;
+    border: 1px solid $color-white;
+    color: $color-white;
+    padding: 16px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 550;
+    height: $height;
+    width: $width;
+    transition: transform 0.2s linear;
+
+    &:hover {
+        box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .1) !important;
+        transform: translate3d(0, -3px, 0);
+    }
+}
+
+@mixin row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin col-3 {
+    width: 30%;
+    // flex: 0 0 auto;
+    // padding: 0 20px;
+}
+
+$gap : 20px;
+
+@mixin col-4 {
+    width: calc(100%/4 - 20px);
+}
+
+@mixin col-6 {
+    width: calc(100% /7);
+    color: $color-text-muted;
+    // height: 100px;
+    // flex: 0 0 auto;
+    // padding: 0 20px;
+}
+
+@mixin col-2 {
+    width: calc(100%/2.1);
+}
+
+$gap: 20px;
+
+@mixin col-5 {
+    width: calc(100%/5 - 20px);
+}
+
+@mixin container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+@mixin position($top, $left) {
+    .sub__nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        &--list li:hover .sub--sub__nav {
+
+            display: block;
+            width: 300px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 100%;
+            background-color: yellow;
+
+
+        }
+
+        .sub--sub__nav {
+            display: none;
+        }
+    }
+
+}
+
+@mixin subsubnavPosition($top, $right, $display) {
+    position: absolute;
+    display: $display;
+    right: $right;
+    top: $top;
+}
